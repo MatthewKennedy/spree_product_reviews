@@ -10,7 +10,7 @@ module Spree
     end
 
     def self.allow_anonymous_reviews?
-      !SpreeReviews::Config[:require_login]
+      !SpreeProductReviews::Config[:require_login]
     end
   end
 end

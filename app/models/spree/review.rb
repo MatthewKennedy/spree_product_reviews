@@ -19,10 +19,10 @@ module Spree
     scope :localized, ->(lc) { where("spree_reviews.locale = ?", lc) }
     scope :most_recent_first, -> { order("spree_reviews.created_at DESC") }
     scope :oldest_first, -> { reorder("spree_reviews.created_at ASC") }
-    scope :preview, -> { limit(SpreeReviews::Config[:preview_size]).oldest_first }
+    scope :preview, -> { limit(SpreeProductReviews::Config[:preview_size]).oldest_first }
     scope :approved, -> { where(approved: true) }
     scope :not_approved, -> { where(approved: false) }
-    scope :default_approval_filter, -> { SpreeReviews::Config[:include_unapproved_reviews] ? all : approved }
+    scope :default_approval_filter, -> { SpreeProductReviews::Config[:include_unapproved_reviews] ? all : approved }
 
     def recalculate_product_rating
       product.recalculate_rating if product.present?

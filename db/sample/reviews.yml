@@ -1,7 +1,6 @@
-<% 
-require 'faker'
-%>
-r1: 
+<%  require 'faker' %>
+
+r1:
   product: ror_tote
   name: <%= Faker::Name.first_name %>  <%= Faker::Name.last_name %>
   location: here
@@ -9,7 +8,8 @@ r1:
   title: "more uses for this item"
   review: <%= Faker::Lorem.paragraph %>
   approved: true
-r2: 
+
+r2:
   product: ror_tote
   name: <%= Faker::Name.first_name %>  <%= Faker::Name.last_name %>
   location: here
@@ -17,7 +17,8 @@ r2:
   title: "further comments"
   review: <%= Faker::Lorem.paragraph %>
   approved: false
-r3: 
+
+r3:
   product: ror_ringer
   name: <%= Faker::Name.first_name %>  <%= Faker::Name.last_name %>
   location: here
@@ -25,7 +26,8 @@ r3:
   title: "essential wear"
   review: <%= Faker::Lorem.paragraph %>
   approved: false
-r4: 
+
+r4:
   product: apache_baseball_jersey
   name: <%= Faker::Name.first_name %>  <%= Faker::Name.last_name %>
   location: here
@@ -33,7 +35,8 @@ r4:
   title: "not impressed"
   review: <%= Faker::Lorem.paragraph %>
   approved: true
-r5: 
+
+r5:
   product: ror_ringer
   name: <%= Faker::Name.first_name %>  <%= Faker::Name.last_name %>
   location: an office
@@ -41,7 +44,8 @@ r5:
   title: "I have one for every day of the week"
   review: <%= Faker::Lorem.paragraph %>
   approved: true
-r6: 
+
+r6:
   product: ror_ringer
   name: <%= Faker::Name.first_name %>  <%= Faker::Name.last_name %>
   location: here
@@ -49,7 +53,8 @@ r6:
   title: "cooler than my toga"
   review: <%= Faker::Lorem.paragraph %>
   approved: true
-r7: 
+
+r7:
   product: ror_ringer
   name: <%= Faker::Name.first_name %>  <%= Faker::Name.last_name %>
   location: emerald city

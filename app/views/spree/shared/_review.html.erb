@@ -1,24 +1,27 @@
-<div class="review" itemprop="reviews" itemscope itemtype="http://schema.org/Review">
-  <span class="reviews-rating" title="<%= txt_stars(review.rating) %>">
-    <%= render 'spree/reviews/stars', stars: review.rating %>
-  </span>
-  <span itemprop="name"><%= review.title %></span>
-  <br/>
-  <span class="attribution"><%= Spree.t(:submitted_on) %>
-    <strong><%= l review.created_at.to_date %></strong>
-  </span>
-  <span itemprop="datePublished" content="<%= review.created_at.to_date.to_s %>"></span>
-  <span itemprop="reviewRating" content="<%= review.rating %>"></span>
-  <% if review.show_identifier %>
-    <% if SpreeReviews::Config[:show_email] && review.user %>
-      <span itemprop="author"><%= review.user.email %></span>
-    <% else %>
-      <span itemprop="author"><%= review.name %></span>
-    <% end %>
-  <% else %>
-    <span itemprop="author"><%= Spree.t(:anonymous) %></span>
-  <% end %>
-  <div itemprop="reviewBody">
-    <%= simple_format(review.review) %>
+<div class="card my-5">
+  <div class="card-body">
+    <h4 class="card-title"><%= review.title %></h4>
+    <p class="card-text"><%= simple_format(review.review) %></p>
+  </div>
+  <div class="card-body">
+    <span class="reviews-rating d-inline-block">
+      <%= render 'spree/reviews/stars', stars: review.rating %>
+    </span>
+    <p class="card-text">
+      <strong>
+        <% if review.show_identifier %>
+          <% if SpreeProductReviews::Config[:show_email] && review.user %>
+            <span itemprop="author"><%= review.user.email %></span>
+          <% else %>
+            <span itemprop="author"><%= review.name %></span>
+        <% end %>
+        <% else %>
+          <span itemprop="author"><%= Spree.t(:anonymous) %></span>
+        <% end %>
+    </strong>
+    -
+    <%= localize review.created_at.to_date %>
+  </p>
+
   </div>
 </div>

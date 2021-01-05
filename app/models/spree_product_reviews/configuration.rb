@@ -1,4 +1,4 @@
-module SpreeReviews
+module SpreeProductReviews
   class Configuration < Spree::Preferences::Configuration
     # Include non-approved reviews in (public) listings.
     preference :include_unapproved_reviews, :boolean, default: false

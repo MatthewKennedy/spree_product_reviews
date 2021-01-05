@@ -134,7 +134,7 @@ RSpec.describe Spree::ReviewsController, type: :controller do
     # It always sets the locale so preference pointless
     context "when config requires locale tracking:" do
       it "sets the locale" do
-        SpreeReviews::Config.preferred_track_locale = true
+        SpreeProductReviews::Config.preferred_track_locale = true
         post :create, review_params
         expect(assigns[:review].locale).to eq I18n.locale.to_s
       end

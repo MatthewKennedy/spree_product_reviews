@@ -24,6 +24,7 @@ en:
     based_upon_review_count:
       one: based upon one review
       other: "based upon %{count} reviews"
+    be_the_first_to_review_this_product: Be the first to review this product
     by: by
     editing_review_for_html: 'Editing review for %{link}'
     error_approve_review: Error approving review

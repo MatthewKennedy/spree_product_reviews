@@ -1,1 +1,33 @@
-<%= render 'spree/shared/reviews' %>
+<div class="container">
+  <div class="row my-5 text-center">
+    <div class="col">
+      <h1><%= @product.name + " " + Spree.t(:reviews) %> </h1>
+      <%= render 'spree/shared/rating', product: @product, review: 0 %>
+      <%= link_to Spree.t(:back_to) + " " +@product.name, product_path(@product), class: 'btn btn-outline-primary text-uppercase', rel: 'nofollow' %>
+      <%= link_to Spree.t(:write_your_own_review), new_product_review_path(@product), class: 'btn btn-primary text-uppercase', rel: 'nofollow' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <% if SpreeProductReviews::Config[:track_locale] %>
+        <% @approved_reviews.localized(I18n.locale).each do |review| %>
+          <%= render 'spree/shared/review', review: review %>
+        <% end %>
+      <% else %>
+        <% @approved_reviews.each do |review| %>
+          <%= render 'spree/shared/review', review: review %>
+        <% end %>
+      <% end %>
+
+      <% if @approved_reviews.respond_to?(:total_pages) %>
+        <div class="plp-pagination d-none d-lg-flex">
+          <%= paginate @approved_reviews, window: 2, theme: 'twitter-bootstrap-4' %>
+        </div>
+
+        <div class="plp-pagination d-lg-none">
+          <%= paginate @approved_reviews, window: 1, theme: 'twitter-bootstrap-4' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

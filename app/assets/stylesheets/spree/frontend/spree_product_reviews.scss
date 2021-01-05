@@ -1,0 +1,92 @@
+:root {
+  --star-box-size: 30px;
+  --star-default-color: lightgrey;
+  --star-active-color: white;
+  --star-default-bg-color: white;
+  --star-active-bg-color: #3cbb91;
+  --fade-speed: 0.8s;
+}
+
+.star-box {
+  background: var(--star-default-bg-color);
+  width: var(--star-box-size);
+  height: var(--star-box-size);
+  border-radius: 3px;
+  border: 1px solid var(--star-default-color);
+  display: inline-block;
+  text-align: center !important;
+}
+
+.center-ratings {
+  margin: auto;
+  width: fit-content;
+  height: var(--star-box-size);
+  display: flex;
+}
+
+body#product-details {
+  .center-ratings {
+    margin: 0;
+    width: fit-content;
+    height: var(--star-box-size);
+    display: flex;
+  }
+}
+
+.rate-area {
+  float: left;
+  border-style: none;
+
+  &:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  &:not(:checked) > label {
+    float: right;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 100%;
+    color: var(--star-default-color);
+    line-height: 1.8em;
+    margin: 0 2px;
+    transition: all var(--fade-speed) ease;
+  }
+
+  &:not(:checked) > label::before {
+    content: '\2605';
+  }
+
+  > input:checked ~ label {
+    color: var(--star-active-color);
+    background-color: var(--star-active-bg-color);
+    border-color: var(--star-active-bg-color);
+  }
+}
+
+.rate-area:not(:checked) > label:hover,
+.rate-area:not(:checked) > label:hover ~ label {
+  color: var(--star-active-color);
+  background-color: var(--star-active-bg-color);
+  border-color: var(--star-active-bg-color);
+}
+
+.rate-area > input:checked ~ label:hover,
+.rate-area > input:checked + label:hover,
+.rate-area > input:checked + label:hover ~ label,
+.rate-area > input:checked ~ label:hover ~ label,
+.rate-area > label:hover ~ input:checked ~ label {
+  color: var(--star-active-color);
+  background-color: var(--star-active-bg-color);
+  border-color: var(--star-active-bg-color);
+}
+
+.display-rating {
+  pointer-events: none !important;
+}
+
+div#final-rating input[type="radio"]:checked + label {
+  background: linear-gradient(90deg, var(--star-active-bg-color) var(--rating), var(--star-active-bg-color) var(--rating), var(--star-default-bg-color) var(--rating));
+}

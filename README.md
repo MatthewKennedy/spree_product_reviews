@@ -9,20 +9,9 @@ Straightforward review/rating functionality.
 
 ## Installation
 
-#### Spree >= 3.1
-
 ```ruby
-gem 'spree_reviews', github: 'spree-contrib/spree_reviews'
+gem 'spree_product_reviews', github: 'matthewkennedy/spree_product_reviews'
 ```
-
-#### Spree 3.0 and Spree 2.x
-
-```ruby
- gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: 'X-X-stable'
- ```
-
- The `branch` option is important: it must match the version of Spree you're using.
- For example, use `3-0-stable` if you're using Spree `3-0-stable` or any `3.0.x` version.
 
 Now bundle up with:
 
@@ -30,7 +19,7 @@ Now bundle up with:
 
 Next, run the rake task that copies the necessary migrations and assets to your project:
 
-    bundle exec rails g spree_reviews:install
+    bundle exec rails g spree_product_reviews:install
 
 And finish with a migrate:
 
