@@ -13,7 +13,7 @@ module Spree
     end
 
     def create
-      params[:review][:rating].sub!(/\s*[^0-9]*\z/, '') unless params[:review][:rating].blank?
+      params[:review][:rating].sub!(/\s*[^0-9]*\z/, "") unless params[:review][:rating].blank?
 
       @review = Spree::Review.new(review_params)
       @review.product = @product

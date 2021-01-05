@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :review, class: Spree::Review do
-    name   { generate(:random_email) }
-    title  { generate(:random_string) }
+    name { generate(:random_email) }
+    title { generate(:random_string) }
     review { generate(:random_description) }
     rating { rand(1..5) }
     approved { false }

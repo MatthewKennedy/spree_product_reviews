@@ -3,10 +3,10 @@ RSpec.describe Spree::Product, type: :model do
   it { is_expected.to respond_to(:reviews) }
   it { is_expected.to respond_to(:stars) }
 
-  context '.stars' do
+  context ".stars" do
     let(:product) { build(:product) }
 
-    it 'rounds' do
+    it "rounds" do
       allow(product).to receive(:avg_rating).and_return(3.7)
       expect(product.stars).to be(4)
 
@@ -14,7 +14,7 @@ RSpec.describe Spree::Product, type: :model do
       expect(product.stars).to be(2)
     end
 
-    it 'handles a nil value' do
+    it "handles a nil value" do
       allow(product).to receive(:avg_rating).and_return(nil)
       expect {
         expect(product.stars).to be(0)
@@ -22,15 +22,15 @@ RSpec.describe Spree::Product, type: :model do
     end
   end
 
-  context '.recalculate_rating' do
+  context ".recalculate_rating" do
     let!(:product) { create(:product) }
 
-    context 'when there are approved reviews' do
+    context "when there are approved reviews" do
       let!(:approved_review_1) { create(:review, product: product, approved: true, rating: 4) }
       let!(:approved_review_2) { create(:review, product: product, approved: true, rating: 5) }
       let!(:unapproved_review_1) { create(:review, product: product, approved: false, rating: 4) }
 
-      it 'updates the product average rating and ignores unapproved reviews' do
+      it "updates the product average rating and ignores unapproved reviews" do
         product.avg_rating = 0
         product.reviews_count = 0
         product.save!
@@ -41,10 +41,10 @@ RSpec.describe Spree::Product, type: :model do
       end
     end
 
-    context 'when no approved reviews' do
+    context "when no approved reviews" do
       let!(:unapproved_review_1) { create(:review, product: product, approved: false, rating: 4) }
 
-      it 'updates the product average rating and ignores unapproved reviews' do
+      it "updates the product average rating and ignores unapproved reviews" do
         product.avg_rating = 3
         product.reviews_count = 20
         product.save!

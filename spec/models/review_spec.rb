@@ -1,5 +1,4 @@
 RSpec.describe Spree::Review, type: :model do
-
   context "validations" do
     it "validates by default" do
       expect(build(:review)).to be_valid

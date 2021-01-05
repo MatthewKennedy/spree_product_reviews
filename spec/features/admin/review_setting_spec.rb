@@ -1,14 +1,14 @@
-require 'spec_helper'
+require "spec_helper"
 
-describe 'Admin Settings for Reviews', :js do
+describe "Admin Settings for Reviews", :js do
   stub_authorization!
 
   before do
     visit spree.edit_admin_review_settings_path
   end
 
-  it 'update' do
-    the_key_string = 'Size of the review snippets'
+  it "update" do
+    the_key_string = "Size of the review snippets"
 
     if Spree.version.to_f < 4.0
       expect(page).to have_content(the_key_string.upcase)
@@ -16,16 +16,16 @@ describe 'Admin Settings for Reviews', :js do
       expect(page).to have_content(the_key_string)
     end
 
-    check 'include_unapproved_reviews'
-    check 'feedback_rating'
-    check 'show_email'
-    check 'require_login'
-    check 'track_locale'
-    check 'show_identifier'
-    fill_in 'preview_size', with: '5'
-    click_button 'Update'
+    check "include_unapproved_reviews"
+    check "feedback_rating"
+    check "show_email"
+    check "require_login"
+    check "track_locale"
+    check "show_identifier"
+    fill_in "preview_size", with: "5"
+    click_button "Update"
 
-    expect(page).to have_content('successfully updated!')
+    expect(page).to have_content("successfully updated!")
 
     setting = SpreeReviews::Configuration.new
 
