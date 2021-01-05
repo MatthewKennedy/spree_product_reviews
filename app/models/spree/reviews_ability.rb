@@ -7,9 +7,6 @@ module Spree
       can :create, Spree::Review do
         review_ability_class.allow_anonymous_reviews? || !user.email.blank?
       end
-      can :create, Spree::FeedbackReview do
-        review_ability_class.allow_anonymous_reviews? || !user.email.blank?
-      end
     end
 
     def self.allow_anonymous_reviews?

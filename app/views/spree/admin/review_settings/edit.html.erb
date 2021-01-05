@@ -13,13 +13,6 @@
       </div>
 
       <div class="checkbox">
-        <%= label_tag :feedback_rating do %>
-          <%= preference_field_tag :feedback_rating, SpreeReviews::Config[:feedback_rating], type: :boolean %>
-          <%= Spree.t(:feedback_rating, scope: :spree_reviews) %>
-        <% end %>
-      </div>
-
-      <div class="checkbox">
         <%= label_tag :show_email do %>
           <%= preference_field_tag :show_email, SpreeReviews::Config[:show_email], type: :boolean %>
           <%= Spree.t(:show_email, scope: :spree_reviews) %>
@@ -50,6 +43,11 @@
       <div class="form-group">
         <%= label_tag Spree.t(:preview_size, scope: :spree_reviews) %>
         <%= number_field_tag :preview_size, SpreeReviews::Config[:preview_size], class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag Spree.t(:number_of_stars, scope: :number_of_stars) %>
+        <%= number_field_tag :number_of_stars, SpreeReviews::Config[:number_of_stars], class: 'form-control' %>
       </div>
 
       <div class="form-actions" data-hook="buttons">

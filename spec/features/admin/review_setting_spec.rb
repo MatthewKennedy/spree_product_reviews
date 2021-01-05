@@ -17,7 +17,6 @@ describe "Admin Settings for Reviews", :js do
     end
 
     check "include_unapproved_reviews"
-    check "feedback_rating"
     check "show_email"
     check "require_login"
     check "track_locale"
@@ -30,7 +29,6 @@ describe "Admin Settings for Reviews", :js do
     setting = SpreeReviews::Configuration.new
 
     expect(setting.preferred_include_unapproved_reviews).to be(true)
-    expect(setting.preferred_feedback_rating).to be(true)
     expect(setting.preferred_show_email).to be(true)
     expect(setting.preferred_require_login).to be(true)
     expect(setting.preferred_track_locale).to be(true)

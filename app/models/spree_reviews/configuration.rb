@@ -9,9 +9,6 @@ module SpreeReviews
     # Show a reviewer's email address.
     preference :show_email, :boolean, default: false
 
-    # Show helpfullness rating form elements.
-    preference :feedback_rating, :boolean, default: false
-
     # Require login to post reviews.
     preference :require_login, :boolean, default: true
 
@@ -22,6 +19,7 @@ module SpreeReviews
     # (name or email) on their review.
     preference :show_identifier, :boolean, default: false
 
+    # How many star rating
     preference :number_of_stars, :integer, default: 5
   end
 end

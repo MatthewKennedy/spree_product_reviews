@@ -2,7 +2,6 @@ module Spree
   class Review < ActiveRecord::Base
     belongs_to :product, touch: true
     belongs_to :user, class_name: Spree.user_class.to_s
-    has_many :feedback_reviews
 
     after_save :recalculate_product_rating, if: :approved?
     after_destroy :recalculate_product_rating
@@ -24,11 +23,6 @@ module Spree
     scope :approved, -> { where(approved: true) }
     scope :not_approved, -> { where(approved: false) }
     scope :default_approval_filter, -> { SpreeReviews::Config[:include_unapproved_reviews] ? all : approved }
-
-    def feedback_stars
-      return 0 if feedback_reviews.size <= 0
-      ((feedback_reviews.sum(:rating) / feedback_reviews.size) + 0.5).floor
-    end
 
     def recalculate_product_rating
       product.recalculate_rating if product.present?

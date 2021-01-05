@@ -38,11 +38,6 @@ RSpec.describe Spree::Admin::ReviewSettingsController, type: :controller do
         expect(subject.preferred_show_email).to be(true)
       end
 
-      it "sets preferred_feedback_rating to false" do
-        put :update, params: {preferences: {feedback_rating: true}}
-        expect(subject.preferred_feedback_rating).to be(true)
-      end
-
       it "sets preferred_require_login to true" do
         put :update, params: {preferences: {require_login: false}}
         expect(subject.preferred_require_login).to be(false)
@@ -56,6 +51,11 @@ RSpec.describe Spree::Admin::ReviewSettingsController, type: :controller do
       it "sets preferred_show_identifier to false" do
         put :update, params: {preferences: {show_identifier: true}}
         expect(subject.preferred_show_identifier).to be(true)
+      end
+
+      it "sets number of stars to 4" do
+        put :update, params: {preferences: {number_of_stars: 6}}
+        expect(subject.preferred_number_of_stars).to be(6)
       end
     end
   end

@@ -161,23 +161,4 @@ RSpec.describe Spree::Review, type: :model do
       review.save!
     end
   end
-
-  context ".feedback_stars" do
-    let!(:user) { create(:user) }
-    let!(:review) { create(:review) }
-    before do
-      12.times do |i|
-        f = Spree::FeedbackReview.new
-        f.user = user
-        f.review = review
-        f.rating = (2)
-        f.save!
-      end
-    end
-
-    it "returns the average rating from feedback reviews" do
-      # No Feedback Stars
-      expect(review.feedback_stars).to be(2)
-    end
-  end
 end

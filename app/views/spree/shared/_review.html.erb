@@ -21,9 +21,4 @@
   <div itemprop="reviewBody">
     <%= simple_format(review.review) %>
   </div>
-  <% if SpreeReviews::Config[:feedback_rating] && (!SpreeReviews::Config[:require_login] || spree_current_user) %>
-    <div class="feedback_review" id="feedback_review_<%= review.id %>">
-      <%= render 'spree/feedback_reviews/form', review: review %>
-    </div>
-  <% end %>
 </div>

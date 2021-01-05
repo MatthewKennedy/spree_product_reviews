@@ -23,12 +23,6 @@ RSpec.describe SpreeReviews::Configuration do
     expect(subject.preferred_show_email).to be(false)
   end
 
-  it "have the feedback_rating preference" do
-    expect(subject).to respond_to(:preferred_feedback_rating)
-    expect(subject).to respond_to(:preferred_feedback_rating=)
-    expect(subject.preferred_feedback_rating).to be(false)
-  end
-
   it "have the require_login preference" do
     expect(subject).to respond_to(:preferred_require_login)
     expect(subject).to respond_to(:preferred_require_login=)

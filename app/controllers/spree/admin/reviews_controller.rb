@@ -30,7 +30,7 @@ module Spree
       def collection
         params[:q] ||= {}
         @search = Spree::Review.ransack(params[:q])
-        @collection = @search.result.includes([:product, :user, :feedback_reviews]).page(params[:page]).per(params[:per_page])
+        @collection = @search.result.includes([:product, :user]).page(params[:page]).per(params[:per_page])
       end
     end
   end
