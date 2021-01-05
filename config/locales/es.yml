@@ -1,0 +1,68 @@
+---
+es:
+  activerecord:
+    attributes:
+      spree/review:
+        name: Tu Nombre
+        title: Título
+        review: Contenido
+        rating: Puntuación
+        created_at: Fecha
+        ip_address: IP
+        user: Usuario
+        show_identifier: Mostrar identificador
+    models:
+      spree/review:
+        one: una valoración
+        other: "%{count} valoraciones"
+  spree:
+    approval_status: Estado de aprobación
+    approve: Aprobar
+    approved_reviews: Aprobado
+    average_customer_rating: "Puntuación media"
+    back_reviews: "Volver a las valoraciones"
+    based_upon_review_count:
+      one: "basado en una valoración"
+      other: "basado en %{count} valoraciones"
+    by: por
+    editing_review_for_html: 'Editando la valoración para %{link}'
+    error_approve_review: "Error aprobando la valoración"
+    error_no_product: "El producto valorado ya no existe"
+    feedback: Realimentación
+    feedback_review_for: "Valoración: '%{review}'"
+    for: para
+    from: desde
+    info_approve_review: "Valoración aprobada"
+    leave_us_a_review_for: "Por favor, déjanos una valoración para %{name}"
+    no_reviews_available: "No hay ninguna valoración para este producto."
+    out_of_5: "de 5"
+    rating: puntuación
+    reviews: Valoraciones
+    admin:
+      tab:
+        review_management: "Valoraciones"
+    review_successfully_submitted: "La valoración se ha enviado correctamente"
+    spree_reviews:
+      feedback_rating: "Puntuación en el feedback"
+      include_unapproved: "Incluir en los listados las valoraciones sin aprobar"
+      manage_review_settings: "Gestionar la publicación de valoraciones"
+      preview_size: "Tamaño de la versión resumida de la valoración"
+      require_login: "Requerir que el usuario esté logado"
+      review_settings: "Configuración de las Valoraciones"
+      show_email: "Mostrar las direcciones de correo"
+      track_locale: "Rastrear el locale del usuario"
+      show_identifier: Mostrar identificador
+    star:
+      one: "1"
+      other: "%{count}"
+    stars: Estrellas
+    submit_your_review: "Envía tu valoración"
+    submitted_on: "Enviada el"
+    unapproved_reviews: "Sin aprobar"
+    voice:
+      one: "1 voz"
+      other: "%{count} voces"
+    was_this_review_helpful: "¿Te ha sido útil esta valoración?"
+    write_your_own_review: "Escribe tu propia valoración"
+    you_must_enter_value_for_rating: "Debes incluir una puntuación."
+    anonymous: Anónimo

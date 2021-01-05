@@ -1,0 +1,69 @@
+---
+de-CH:
+  activerecord:
+    attributes:
+      spree/review:
+        name: Name
+        title: Überschrift
+        review: Inhalt
+        rating: Bewertung
+        created_at: Erstellt am
+        ip_address: IP
+        user: Benutzer
+        locale: Sprache
+        show_identifier: Kennung anzeigen
+    models:
+      spree/review:
+        one: eine Rezension
+        other: "%{count} Rezensionen"
+  spree:
+    approval_status: Freischaltungsstatus
+    approve: Freischalten
+    approved_reviews: Freigeschaltete Rezensionen
+    average_customer_rating: Durchschnittliche Bewertung
+    back_reviews: Zurück zu den Rezensionen
+    based_upon_review_count:
+      one: basiert auf einer Rezension
+      other: "basiert auf %{count} Rezensionen"
+    by: Von
+    editing_review_for_html: 'Rezension über %{link} bearbeiten'
+    error_approve_review: Fehler bei der Freischaltung
+    error_no_product: Das rezensierte Produkt existiert nicht mehr.
+    feedback: Feedback
+    feedback_review_for: "Rezension: '%{review}'"
+    for: über
+    from: aus
+    info_approve_review: Die Rezension wurde freigeschaltet.
+    leave_us_a_review_for: "Ihre Rezension über %{name}"
+    no_reviews_available: "Es sind noch keine Rezensionen für dieses Produkt vorhanden."
+    out_of_5: "von 5"
+    rating: Bewertung
+    reviews: Rezensionen
+    admin:
+      tab:
+        review_management: Rezensionen
+    review_successfully_submitted: "Ihre Rezension wurde erfolgreich übertragen. Vielen Dank!"
+    spree_reviews:
+      feedback_rating: Feedback für Rezensionen erlauben
+      include_unapproved: Unveröffentlichte Rezensionen anzeigen
+      manage_review_settings: Einstellungen für die Darstellung von Rezensionen
+      preview_size: Größe der Vorschau
+      require_login: Login erforderlich
+      review_settings: Rezensionseinstellungen
+      show_email: E-Mail Adressen anzeigen
+      track_locale: Sprache des Benutzers tracken
+      show_identifier: Kennung anzeigen
+    star:
+      one: "ein Sternchen"
+      other: "%{count} Sternchen"
+    stars: Sternchen
+    submit_your_review: Rezension abschicken
+    submitted_on: Eingeschickt am
+    unapproved_reviews: Nicht freigeschaltete Rezensionen
+    voice:
+      one: "Eine Stimme"
+      other: "%{count} Stimmen"
+    was_this_review_helpful: War diese Rezension für Sie hilfreich?
+    write_your_own_review: Rezension schreiben
+    you_must_enter_value_for_rating: "Bitte geben Sie eine Bewertung an."
+    anonymous: Anonym

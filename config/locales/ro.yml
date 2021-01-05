@@ -1,0 +1,76 @@
+---
+ro:
+  activerecord:
+    attributes:
+      spree/review:
+        name: Nume
+        title: Titlu
+        review: Conținut
+        rating: Evaluare
+        created_at: Data
+        ip_address: IP
+        user: Utilizator
+        show_identifier: ~
+    models:
+      spree/review:
+        one: o recenzie
+        few: "%{count} recenzii"
+        other: "%{count} recenzii"
+        many: "%{count} de recenzii"
+  spree:
+    approval_status: Starea de aprobare
+    approve: Aprobă
+    approved_reviews: Aprobate
+    average_customer_rating: Evaluare media
+    back_reviews: Înapoi la recenzii
+    based_upon_review_count:
+      one: bazată pe o recenzie
+      few: "bazată pe %{count} recenzii"
+      other: "bazată pe %{count} recenzii"
+      many: "bazată pe %{count} de recenzii"
+    by: de
+    editing_review_for_html: 'Editare recenzie pentru %{link}'
+    error_approve_review: Eroare la aprobarea recenziei
+    error_no_product: Produsul recenziat nu mai există
+    feedback: Feedback
+    feedback_review_for: "Recenzie: '%{review}'"
+    for: pentru
+    from: de la
+    info_approve_review: Recenzie aprobată
+    leave_us_a_review_for: "Vă rugăm să publicați o recenzie și să evaluați '%{name}'"
+    no_reviews_available: "Încă nu au fost scrise recenzii pentru acest produs."
+    out_of_5: "din 5"
+    rating: evaluare
+    reviews: Recenzii
+    admin:
+      tab:
+        review_management: Recenzii
+    review_successfully_submitted: Recenzia a fost trimisă cu succes
+    spree_reviews:
+      feedback_rating: Evaluează feedback
+      include_unapproved: Include recenzii neaprobate în listări
+      manage_review_settings: Controlează afișarea recenziilor
+      preview_size: Mărimea fragmentului recenziei
+      require_login: Solicită ca utilizatorul să fie autentificat
+      review_settings: Setări recenzii
+      show_email: Afișează adresa de email
+      track_locale: Urmărește setarea de limbă a utilizatorului
+      show_identifier: ~
+    star:
+      one: "o stea"
+      few: "%{count} stele"
+      other: "%{count} stele"
+      many: "%{count} de stele"
+    stars: Stele
+    submit_your_review: Trimite recenzia
+    submitted_on: Trimisă la
+    unapproved_reviews: Neaprobat
+    voice:
+      one: "o opinie"
+      few: "%{count} opinii"
+      other: "%{count} opinii"
+      many: "%{count} de opinii"
+    was_this_review_helpful: "A fost de ajutor această recenzie?"
+    write_your_own_review: Scrie propria ta recenzie
+    you_must_enter_value_for_rating: "Trebuie să introduci o valoare pentru evaluare."
+    anonymous: anonim

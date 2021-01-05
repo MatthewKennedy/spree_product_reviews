@@ -1,0 +1,68 @@
+---
+pt:
+  activerecord:
+    attributes:
+      spree/review:
+        name: Nome
+        title: Título Avaliação
+        review: Conteúdo
+        rating: Avaliação
+        created_at: Data
+        ip_address: IP
+        user: Utilizador
+        show_identifier: ~
+    models:
+      spree/review:
+        one: uma avaliação
+        other: "%{count} avaliações"
+  spree:
+    approval_status: Estado de aprovação
+    approve: Aprovar
+    approved_reviews: Avaliações aprovadas
+    average_customer_rating: Pontuação média dos utilizadores fruga
+    back_reviews: Voltar para as avaliações
+    based_upon_review_count:
+      one: baseada numa avaliação
+      other: "baseada em %{count} avaliações"
+    by: por
+    editing_review_for_html: 'Editando a avaliação para %{link}'
+    error_approve_review: Erro aprovando a avaliação
+    error_no_product: O produto avaliado já não existe
+    feedback: Feedback
+    feedback_review_for: "Avaliação: '%{review}'"
+    for: para
+    from: de
+    info_approve_review: Avaliação aprovada
+    leave_us_a_review_for: "Por favor, deixe-nos uma avaliação para produto %{name}"
+    no_reviews_available: "Não foram ainda feitas avaliações para este produto."
+    out_of_5: "de 5"
+    rating: pontuação
+    reviews: Avaliações
+    admin:
+      tab:
+        review_management: Gestão Avaliações
+    review_successfully_submitted: A avaliação foi enviada com sucesso
+    spree_reviews:
+      feedback_rating: Pontuação de feedback
+      include_unapproved: Incluir avaliaçoes não-aprovadas nas lista
+      manage_review_settings: Gerir a publicação de avaliações
+      preview_size: Tamanho da versão resumida de avaliações
+      require_login: Requerer que utilizador esteja registado
+      review_settings: Configurações de Avaliação
+      show_email: Mostrar email
+      track_locale: Seguir locale do utilizador
+      show_identifier: ~
+    star:
+      one: "1"
+      other: "%{count}"
+    stars: Stars
+    submit_your_review: Envia tua avaliação
+    submitted_on: Enviada em
+    unapproved_reviews: Não aprovadas
+    voice:
+      one: "uma opinião"
+      other: "%{count} opiniões"
+    was_this_review_helpful: "Esta avaliação foi util?"
+    write_your_own_review: Escreve a tua própria avaliação
+    you_must_enter_value_for_rating: "Tem de incluir uma pontuação."
+    anonymous: Anônimo

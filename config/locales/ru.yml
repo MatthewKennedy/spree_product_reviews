@@ -1,0 +1,78 @@
+---
+ru:
+  activerecord:
+    attributes:
+      spree/review:
+        name: Ваше имя
+        title: Заголовок
+        review: Содержание
+        rating: Рейтинг
+        created_at: Дата отзыва
+        ip_address: IP
+        user: Пользователь
+        show_identifier: Отображать имя или email
+    models:
+      spree/review:
+        zero: "0 отзывов"
+        one: "%{count} отзыв"
+        few: "%{count} отзыва"
+        other: "%{count} отзывов"
+        many: "%{count} отзыва"
+  spree:
+    approval_status: Статус отзывов
+    approve: Одобрить
+    approved_reviews: Утверждённые отзывы
+    average_customer_rating: Средняя оценка
+    back_reviews: Назад к отзывам
+    based_upon_review_count:
+      one: на основе
+      other: На основании всех отзывов
+      few: На основании всех отзывов
+      many: На основании всех отзывов
+    by: ''
+    editing_review_for_html: Редактирование отзыва для HTML
+    error_approve_review: Ошибка при одобрении отзыва
+    error_no_product: Отзывы продукт больше не существует
+    feedback: Обратная связь
+    feedback_review_for: "Отзывы: '%{review}'"
+    for: для
+    from: от
+    info_approve_review: Отзыв одобрен
+    leave_us_a_review_for: 'Пожалуйста, оставьте отзыв и оценку для'
+    no_reviews_available: Отзывов нет
+    out_of_5: 'из 5'
+    rating: Оценка
+    reviews: Отзывы
+    admin:
+      tab:
+        review_management: Управление отзывами
+    review_successfully_submitted: Ваш отзыв был успешно отправлен
+    spree_reviews:
+      feedback_rating: Райтинг отзывов
+      include_unapproved: Показывать неодобренные отзывы на странице товара
+      manage_review_settings: Управление отображением отзывов
+      preview_size: Количество отзывов на странице товара
+      require_login: Требовать вход
+      review_settings: Настройки отзывов покупателей
+      show_email: Показывать электронную почту
+      track_locale: Отслеживать язык
+      show_identifier: Отображать имя или email автора под отзывом
+    star:
+      one: '1'
+      few: '%{count}'
+      many: '%{count}'
+      other: '%{count}'
+    stars: Звёзды
+    submit_your_review: Оставить отзыв
+    submitted_on: Добавлено
+    unapproved_reviews: Неутверждённые отзывы
+    voice:
+      zero: '0 голосов'
+      one: '%{count} голос'
+      few: '%{count} голоса'
+      other: '%{count} голосов'
+      many: '%{count} голоса'
+    was_this_review_helpful: Был ли Вам полезен этот отзыв?
+    write_your_own_review: Напишите свой отзыв
+    you_must_enter_value_for_rating: Вы должны оценить отзыв.
+    anonymous: 'анонимный'
