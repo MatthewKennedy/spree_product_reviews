@@ -1,12 +1,11 @@
-# SpreeProductReviews
+# spree_product_reviews
+![CI](https://github.com/MatthewKennedy/spree_product_reviews/workflows/CI/badge.svg)
+![Standard Rb](https://github.com/MatthewKennedy/spree_product_reviews/workflows/Standard%20Rb/badge.svg)
 
-Product reviws for Spree
-
-- No javascript
-- Customizable stars
-- One review per user
-- Clean none cluttered
-- Dedicated reviews page, SEO + Pagnation
+- Zero Javascript
+- CSS Customizable stars
+- Optional one review per user
+- Dedicated reviews page SEO optimized for people searching a review of your product.
 
 ## Installation
 
