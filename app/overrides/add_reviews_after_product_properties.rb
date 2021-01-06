@@ -7,8 +7,8 @@ Deface::Override.new(
 )
 
 Deface::Override.new(
-  virtual_path: 'spree/products/_cart_form',
-  name: 'add_stars_under_price',
+  virtual_path: "spree/products/_cart_form",
+  name: "add_stars_under_price",
   insert_after: '[data-hook="product_price"]',
-  partial: 'spree/shared/price_stars'
+  partial: "spree/shared/price_stars"
 )
