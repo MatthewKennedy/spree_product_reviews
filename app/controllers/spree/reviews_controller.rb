@@ -1,5 +1,6 @@
 module Spree
   class ReviewsController < Spree::StoreController
+
     helper Spree::BaseHelper
     before_action :load_product, only: [:index, :new, :create]
 
@@ -9,8 +10,11 @@ module Spree
     end
 
     def new
-      @review = Spree::Review.new(product: @product)
-      authorize! :create, @review
+      if spree_user_signed_in?
+        @review = Spree::Review.new(product: @product)
+      else
+        redirect_unauthorized_access
+      end
     end
 
     def create
@@ -22,7 +26,6 @@ module Spree
       @review.ip_address = request.remote_ip
       @review.locale = I18n.locale.to_s if SpreeProductReviews::Config[:track_locale]
 
-      authorize! :create, @review
       if @review.save
         flash[:notice] = Spree.t(:review_successfully_submitted)
         redirect_to spree.product_path(@product)

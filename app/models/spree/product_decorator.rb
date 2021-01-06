@@ -8,6 +8,8 @@ module Spree
     def stars
       if avg_rating.nil?
         0
+      elsif (avg_rating.modulo(1).round(1) * 100) == 0
+        avg_rating.floor
       else
         avg_rating.ceil
       end

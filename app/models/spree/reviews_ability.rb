@@ -4,8 +4,9 @@ module Spree
 
     def initialize(user)
       review_ability_class = self.class
-      can :create, Spree::Review do
-        review_ability_class.allow_anonymous_reviews? || !user.email.blank?
+
+      can :create, Spree::Review do |_review|
+        review_ability_class.allow_anonymous_reviews? || user.email.present?
       end
     end
 
