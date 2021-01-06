@@ -1,6 +1,6 @@
 <%= render 'spree/shared/rating', product: @product, review: 0 %>
 <% if SpreeProductReviews::Config[:include_unapproved_reviews] == false and @product.reviews.approved.count == 0 %>
-    <%= link_to Spree.t(:be_the_first_to_review_this_product), new_product_review_path(@product), class: 'btn btn-sm btn-outline-primary my-2', rel: 'nofollow' %>
+    <%= link_to Spree.t(:be_the_first_to_review_this_product), new_product_review_path(@product), class: 'btn btn-sm btn-outline-primary mb-2', rel: 'nofollow' %>
 <% else %>
-    <%= link_to Spree.t(:read_reviews), product_reviews_path(@product), class: 'btn btn-sm btn-outline-primary my-2', rel: 'nofollow' %>
+    <%= link_to Spree.t(:read_reviews), product_reviews_path(@product), class: 'btn btn-sm btn-outline-primary mb-2', rel: 'nofollow' %>
 <% end %>
