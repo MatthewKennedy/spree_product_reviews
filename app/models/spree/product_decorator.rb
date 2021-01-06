@@ -6,7 +6,11 @@ module Spree
     end
 
     def stars
-      avg_rating.try(:round) || 0
+      if avg_rating.nil?
+        0
+      else
+        avg_rating.ceil
+      end
     end
 
     def recalculate_rating

@@ -1,6 +1,12 @@
 # SpreeProductReviews
 
-Product reviws for Spree 4.2
+Product reviws for Spree
+
+- No javascript
+- Customizable stars
+- One review per user
+- Clean none cluttered
+- Dedicated reviews page, SEO + Pagnation
 
 ## Installation
 
