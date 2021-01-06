@@ -1,5 +1,6 @@
 appraise "spree-3-7" do
-  gem "spree", "~> 3.7.0"
+  gem "spree", branch: "3-7-stable", git: "https://github.com/spree/spree.git"
+  gem "sass-rails"
   gem "spree_auth_devise", "~> 3.5"
   gem "rails-controller-testing"
 end
