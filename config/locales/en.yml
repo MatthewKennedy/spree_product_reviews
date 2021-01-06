@@ -16,6 +16,7 @@ en:
         one: one review
         other: "%{count} reviews"
   spree:
+    already_submitted_a_review: You have already submitted a review
     approval_status: Approval status
     approve: Approve
     approved_reviews: Approved
@@ -39,12 +40,12 @@ en:
     out_of_5: "out of 5"
     rating: rating
     reviews: Reviews
+    read_reviews: Read reviews
     admin:
       tab:
         review_management: Reviews
     review_successfully_submitted: Review was successfully submitted
     spree_reviews:
-      feedback_rating: Rate feedback
       include_unapproved: Include unapproved reviews in listings
       manage_review_settings: Control the display of reviews
       preview_size: Size of the review snippets
@@ -60,9 +61,6 @@ en:
     submit_your_review: Submit your review
     submitted_on: Submitted on
     unapproved_reviews: Unapproved
-    voice:
-      one: "1 voice"
-      other: "%{count} voices"
     was_this_review_helpful: "Was this review helpful to you?"
     write_your_own_review: Write your own review
     you_must_enter_value_for_rating: "You must enter a value for rating."

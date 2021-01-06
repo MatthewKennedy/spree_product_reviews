@@ -21,5 +21,7 @@ module SpreeProductReviews
 
     # How many star rating
     preference :number_of_stars, :integer, default: 5
+
+    preference :limit_to_one_review_per_user, :boolean, default: true
   end
 end

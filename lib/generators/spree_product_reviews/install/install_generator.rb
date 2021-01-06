@@ -4,6 +4,7 @@ module SpreeProductReviews
       class_option :auto_run_migrations, type: :boolean, default: false
 
       def add_stylesheets
+        inject_into_file "vendor/assets/stylesheets/spree/frontend/all.css", " *= require spree/frontend/spree_product_reviews_vars\n", before: %r{\*/}, verbose: true
         inject_into_file "vendor/assets/stylesheets/spree/frontend/all.css", " *= require spree/frontend/spree_product_reviews\n", before: %r{\*/}, verbose: true
       end
 

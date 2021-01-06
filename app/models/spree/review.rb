@@ -14,6 +14,13 @@ module Spree
       message: Spree.t(:you_must_enter_value_for_rating)
     }
 
+    if SpreeProductReviews::Config[:limit_to_one_review_per_user]
+      validates :user_id, uniqueness: {
+        scope: :product_id,
+        message: Spree.t(:already_submitted_a_review)
+      }
+    end
+
     default_scope { order("spree_reviews.created_at DESC") }
 
     scope :localized, ->(lc) { where("spree_reviews.locale = ?", lc) }

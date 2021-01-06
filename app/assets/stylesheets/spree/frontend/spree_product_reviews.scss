@@ -1,17 +1,8 @@
-:root {
-  --star-box-size: 30px;
-  --star-default-color: lightgrey;
-  --star-active-color: white;
-  --star-default-bg-color: white;
-  --star-active-bg-color: #3cbb91;
-  --fade-speed: 0.8s;
-}
-
 .star-box {
   background: var(--star-default-bg-color);
   width: var(--star-box-size);
   height: var(--star-box-size);
-  border-radius: 3px;
+  border-radius: var(--star-border-radius);
   border: 1px solid var(--star-default-color);
   display: inline-block;
   text-align: center !important;

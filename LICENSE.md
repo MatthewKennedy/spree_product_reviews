@@ -1,4 +1,4 @@
-Copyright (c) 2009-2015 Spree Commerce and contributors.
+Copyright (c) 2009-2015 Matthew Kennedy.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

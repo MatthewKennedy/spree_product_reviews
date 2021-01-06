@@ -42,7 +42,7 @@ feature "Reviews", :js do
       end
 
       it "can see a prompt to review" do
-        expect(page).to have_text Spree.t(:write_your_own_review)
+        expect(page).to have_text Spree.t(:read_reviews)
       end
     end
   end
@@ -59,7 +59,7 @@ feature "Reviews", :js do
       end
 
       it "can see create new review button" do
-        expect(page).to have_text Spree.t(:write_your_own_review)
+        expect(page).to have_text Spree.t(:read_reviews)
       end
 
       it "can create new review" do

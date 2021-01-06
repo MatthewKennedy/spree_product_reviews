@@ -1,4 +1,4 @@
-<div class="card my-5">
+<div class="card my-5 review">
   <div class="card-body">
     <h4 class="card-title"><%= review.title %></h4>
     <p class="card-text"><%= simple_format(review.review) %></p>
@@ -18,10 +18,9 @@
         <% else %>
           <span itemprop="author"><%= Spree.t(:anonymous) %></span>
         <% end %>
-    </strong>
-    -
-    <%= localize review.created_at.to_date %>
-  </p>
-
+      </strong>
+      -
+      <%= localize review.created_at.to_date %>
+    </p>
   </div>
 </div>
