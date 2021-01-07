@@ -39,9 +39,9 @@ body#product-details {
     overflow: hidden;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 100%;
+    font-size: var(--star-font-size);
     color: var(--star-default-color);
-    line-height: 1.8em;
+    line-height: var(--star-line-height);
     margin: 0 2px;
     transition: all var(--fade-speed) ease;
   }
