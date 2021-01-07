@@ -9,16 +9,11 @@ module Spree
     end
 
     def new
-      if spree_user_signed_in?
-        @review = Spree::Review.new(product: @product)
-      else
-        redirect_unauthorized_access
-      end
+      @review = Spree::Review.new(product: @product)
+      authorize! :create, @review
     end
 
     def create
-      raise StandardError.new "Must be signed in to create a review" unless spree_user_signed_in?
-
       params[:review][:rating].sub!(/\s*[^0-9]*\z/, "") unless params[:review][:rating].blank?
 
       @review = Spree::Review.new(review_params)
@@ -27,6 +22,7 @@ module Spree
       @review.ip_address = request.remote_ip
       @review.locale = I18n.locale.to_s if SpreeProductReviews::Config[:track_locale]
 
+      authorize! :create, @review
       if @review.save
         flash[:notice] = Spree.t(:review_successfully_submitted)
         redirect_to spree.product_path(@product)

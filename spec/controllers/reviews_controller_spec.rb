@@ -1,6 +1,4 @@
 RSpec.describe Spree::ReviewsController, type: :controller do
-  stub_authorization!
-
   let(:user) { create(:user) }
   let(:product) { create(:product) }
 
@@ -21,7 +19,9 @@ RSpec.describe Spree::ReviewsController, type: :controller do
   context "#index" do
     context "for a product that does not exist" do
       it "responds with a 404" do
-        expect { get :index, params: {product_id: "not_real"} }.to raise_exception(ActiveRecord::RecordNotFound)
+        expect {
+          get :index, params: {product_id: "not_real"}
+        }.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
 
@@ -40,7 +40,9 @@ RSpec.describe Spree::ReviewsController, type: :controller do
   context "#new" do
     context "for a product that does not exist" do
       it "responds with a 404" do
-        expect { get :index, params: {product_id: "not_real"} }.to raise_exception(ActiveRecord::RecordNotFound)
+        expect {
+          get :index, params: {product_id: "not_real"}
+        }.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
 
@@ -66,7 +68,9 @@ RSpec.describe Spree::ReviewsController, type: :controller do
 
     context "for a product that does not exist" do
       it "responds with a 404" do
-        expect { post :create, params: {product_id: "not_real"} }.to raise_exception(ActiveRecord::RecordNotFound)
+        expect {
+          post :create, params: {product_id: "not_real"}
+        }.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
 
