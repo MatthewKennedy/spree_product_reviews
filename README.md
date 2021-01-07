@@ -2,10 +2,10 @@
 ![CI](https://github.com/MatthewKennedy/spree_product_reviews/workflows/CI/badge.svg)
 ![Standard Rb](https://github.com/MatthewKennedy/spree_product_reviews/workflows/Standard%20Rb/badge.svg)
 
-- Zero Javascript
 - CSS Customizable stars
-- Optional one review per user
-- Dedicated reviews page SEO optimized for people searching a review of your product.
+- Optional one review per user (Helps stops spam reviews)
+- Reviews page with pagination.
+- Users must be logged in to leave a review (Helps stops spam reviews)
 
 ## Installation
 
@@ -58,8 +58,9 @@ This partial is used to show recent reviews:
 <%= render 'spree/shared/reviews', stars: @product.stars %>
 ```
 
-You can also customize the stars by creating a custom CSS file and setting the variables seen in spree_product_reviews_vars.scss
+## Customize The Stars
 
+You can customize the stars by creating a custom CSS file and setting the variables seen in spree_product_reviews_vars.scss
 
 ## Testing
 

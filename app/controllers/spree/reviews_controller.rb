@@ -23,7 +23,7 @@ module Spree
 
       @review = Spree::Review.new(review_params)
       @review.product = @product
-      @review.user = spree_current_user if spree_user_signed_in?
+      @review.user = spree_current_user
       @review.ip_address = request.remote_ip
       @review.locale = I18n.locale.to_s if SpreeProductReviews::Config[:track_locale]
 
