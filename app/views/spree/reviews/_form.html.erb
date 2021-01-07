@@ -22,19 +22,9 @@
     <%= f.text_area :review, wrap: 'virtual', rows: 10, cols: 50, class: 'form-control', required: true %>
   </div>
 
-  <% if SpreeProductReviews::Config[:show_identifier] %>
-    <div class="checkbox">
-      <%= f.label :show_identifier do %>
-        <%= f.check_box :show_identifier, checked: true %>
-        <%= Spree::Review.human_attribute_name(:show_identifier) %>
-      <% end %>
-    </div>
-  <% end %>
-
   <div class="form-actions">
     <%= f.submit Spree.t(:submit_your_review), class: 'btn btn-primary text-uppercase', rel: 'nofollow' %>
      - or -
     <%= link_to Spree.t(:cancle), product_path(@product), class: 'btn btn-outline-primary text-uppercase', rel: 'nofollow' %>
   </div>
 <% end %>
-

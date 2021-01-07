@@ -16,10 +16,8 @@ RSpec.describe Spree::Admin::ReviewSettingsController, type: :controller do
     context 'For parameters:
             include_unapproved_reviews: true
             preview_size: 4,
-            show_email: true,
             feedback_rating: true,
-            track_locale: true
-            show_identifier: true' do
+            track_locale: true' do
       subject { SpreeProductReviews::Config }
 
       it "sets preferred_include_unapproved_reviews to false" do
@@ -32,19 +30,9 @@ RSpec.describe Spree::Admin::ReviewSettingsController, type: :controller do
         expect(subject.preferred_preview_size).to be(4)
       end
 
-      it "sets preferred_show_email to false" do
-        put :update, params: {preferences: {show_email: true}}
-        expect(subject.preferred_show_email).to be(true)
-      end
-
       it "sets preferred_track_locale to true" do
         put :update, params: {preferences: {track_locale: true}}
         expect(subject.preferred_track_locale).to be(true)
-      end
-
-      it "sets preferred_show_identifier to false" do
-        put :update, params: {preferences: {show_identifier: true}}
-        expect(subject.preferred_show_identifier).to be(true)
       end
 
       it "sets number of stars to 4" do
