@@ -1,6 +1,5 @@
 module Spree
   class ReviewsController < Spree::StoreController
-
     helper Spree::BaseHelper
     before_action :load_product, only: [:index, :new, :create]
 
@@ -18,6 +17,8 @@ module Spree
     end
 
     def create
+      raise StandardError.new "Must be signed in to create a review" unless spree_user_signed_in?
+
       params[:review][:rating].sub!(/\s*[^0-9]*\z/, "") unless params[:review][:rating].blank?
 
       @review = Spree::Review.new(review_params)

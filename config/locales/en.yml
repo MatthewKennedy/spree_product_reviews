@@ -49,7 +49,6 @@ en:
       include_unapproved: Include unapproved reviews in listings
       manage_review_settings: Control the display of reviews
       preview_size: Size of the review snippets
-      require_login: Require user to be logged in
       review_settings: Review Settings
       show_email: Show email addresses
       track_locale: Track user's locale

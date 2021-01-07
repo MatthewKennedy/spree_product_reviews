@@ -3,7 +3,7 @@
   <% for review in (SpreeProductReviews::Config[:track_locale] ? @product.reviews.localized(I18n.locale) : @product.reviews).default_approval_filter.preview %>
     <%= render 'spree/shared/review', review: review %>
   <% end %>
-  <% if !SpreeProductReviews::Config[:require_login] || spree_current_user %>
+  <% if spree_user_signed_in? %>
     <%= link_to Spree.t(:write_your_own_review), new_product_review_path(@product), class: 'btn btn-default' %>
   <% end %>
 </div>

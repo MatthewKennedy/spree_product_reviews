@@ -18,7 +18,6 @@ RSpec.describe Spree::Admin::ReviewSettingsController, type: :controller do
             preview_size: 4,
             show_email: true,
             feedback_rating: true,
-            require_login: false,
             track_locale: true
             show_identifier: true' do
       subject { SpreeProductReviews::Config }
@@ -36,11 +35,6 @@ RSpec.describe Spree::Admin::ReviewSettingsController, type: :controller do
       it "sets preferred_show_email to false" do
         put :update, params: {preferences: {show_email: true}}
         expect(subject.preferred_show_email).to be(true)
-      end
-
-      it "sets preferred_require_login to true" do
-        put :update, params: {preferences: {require_login: false}}
-        expect(subject.preferred_require_login).to be(false)
       end
 
       it "sets preferred_track_locale to true" do

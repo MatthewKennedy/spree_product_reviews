@@ -23,12 +23,6 @@ RSpec.describe SpreeProductReviews::Configuration do
     expect(subject.preferred_show_email).to be(false)
   end
 
-  it "have the require_login preference" do
-    expect(subject).to respond_to(:preferred_require_login)
-    expect(subject).to respond_to(:preferred_require_login=)
-    expect(subject.preferred_require_login).to be(true)
-  end
-
   it "have the track_locale preference" do
     expect(subject).to respond_to(:preferred_track_locale)
     expect(subject).to respond_to(:preferred_track_locale=)

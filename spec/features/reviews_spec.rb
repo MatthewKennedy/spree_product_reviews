@@ -28,10 +28,6 @@ feature "Reviews", :js do
   end
 
   context "when anonymous user" do
-    before do
-      SpreeProductReviews::Config.require_login = true
-    end
-
     context "visit product with review" do
       before do
         visit spree.product_path(review.product)
@@ -50,7 +46,6 @@ feature "Reviews", :js do
   context "when logged in user" do
     context "visit product with review" do
       before do
-        SpreeProductReviews::Config.require_login = true
         visit spree.product_path(review.product)
       end
 

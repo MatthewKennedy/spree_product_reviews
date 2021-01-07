@@ -13,9 +13,6 @@ module SpreeProductReviews
     # Show a reviewer's email address.
     preference :show_email, :boolean, default: false
 
-    # Require login to post reviews.
-    preference :require_login, :boolean, default: true
-
     # Whether to keep track of the reviewer's locale.
     preference :track_locale, :boolean, default: false
 

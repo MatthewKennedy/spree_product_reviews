@@ -82,13 +82,6 @@ RSpec.describe Spree::ReviewsController, type: :controller do
       expect(assigns[:review].ip_address).to eq "127.0.0.1"
     end
 
-    it "fails if the user is not authorized to create a review" do
-      allow(controller).to receive(:authorize!) { raise }
-      expect {
-        post :create, review_params
-      }.to raise_error
-    end
-
     it "flashes the notice" do
       post :create, review_params
       expect(flash[:notice]).to eq Spree.t(:review_successfully_submitted)
