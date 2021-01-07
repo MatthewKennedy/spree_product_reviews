@@ -9,7 +9,6 @@ class CreateSpreeProductReviews < ActiveRecord::Migration[5.2]
       t.text :review
       t.integer :user_id
       t.string :locale, default: "en"
-      t.boolean :show_identifier, default: true
       t.string :ip_address
       t.boolean :approved, default: false
 

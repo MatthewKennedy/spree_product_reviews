@@ -7,7 +7,7 @@ module Spree
         base.module_eval do
           @@review_attributes = [
             :id, :product_id, :name, :location, :rating, :title, :review, :approved,
-            :created_at, :updated_at, :user_id, :ip_address, :locale, :show_identifier
+            :created_at, :updated_at, :user_id, :ip_address, :locale
           ]
 
           def review_attributes

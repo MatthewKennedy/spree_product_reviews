@@ -10,7 +10,6 @@ en:
         created_at: Date
         ip_address: IP
         user: User
-        show_identifier: Show Identifier
     models:
       spree/review:
         one: one review
@@ -50,9 +49,7 @@ en:
       manage_review_settings: Control the display of reviews
       preview_size: Size of the review snippets
       review_settings: Review Settings
-      show_email: Show email addresses
       track_locale: Track user's locale
-      show_identifier: Show Identifier
     star:
       one: "1"
       other: "%{count}"

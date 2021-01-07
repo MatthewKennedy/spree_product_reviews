@@ -13,23 +13,9 @@
       </div>
 
       <div class="checkbox">
-        <%= label_tag :show_email do %>
-          <%= preference_field_tag :show_email, SpreeProductReviews::Config[:show_email], type: :boolean %>
-          <%= Spree.t(:show_email, scope: :spree_reviews) %>
-        <% end %>
-      </div>
-
-      <div class="checkbox">
         <%= label_tag :track_locale do %>
           <%= preference_field_tag :track_locale, SpreeProductReviews::Config[:track_locale], type: :boolean %>
           <%= Spree.t(:track_locale, scope: :spree_reviews) %>
-        <% end %>
-      </div>
-
-      <div class="checkbox">
-        <%= label_tag :show_identifier do %>
-          <%= preference_field_tag :show_identifier, SpreeProductReviews::Config[:show_identifier], type: :boolean %>
-          <%= Spree.t(:show_identifier, scope: :spree_reviews) %>
         <% end %>
       </div>
 

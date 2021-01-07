@@ -9,15 +9,7 @@
     </span>
     <p class="card-text">
       <strong>
-        <% if review.show_identifier %>
-          <% if SpreeProductReviews::Config[:show_email] && review.user %>
-            <span itemprop="author"><%= review.user.email %></span>
-          <% else %>
-            <span itemprop="author"><%= review.name %></span>
-        <% end %>
-        <% else %>
-          <span itemprop="author"><%= Spree.t(:anonymous) %></span>
-        <% end %>
+        <span itemprop="author"><%= review.name %></span>
       </strong>
       -
       <%= localize review.created_at.to_date %>

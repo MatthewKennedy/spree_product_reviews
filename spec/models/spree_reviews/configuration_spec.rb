@@ -17,22 +17,10 @@ RSpec.describe SpreeProductReviews::Configuration do
     expect(subject.preferred_preview_size).to be(3)
   end
 
-  it "have the show_email preference" do
-    expect(subject).to respond_to(:preferred_show_email)
-    expect(subject).to respond_to(:preferred_show_email=)
-    expect(subject.preferred_show_email).to be(false)
-  end
-
   it "have the track_locale preference" do
     expect(subject).to respond_to(:preferred_track_locale)
     expect(subject).to respond_to(:preferred_track_locale=)
     expect(subject.preferred_track_locale).to be(false)
-  end
-
-  it "have the show_identifier preference" do
-    expect(subject).to respond_to(:preferred_show_identifier)
-    expect(subject).to respond_to(:preferred_show_identifier=)
-    expect(subject.preferred_show_identifier).to be(false)
   end
 
   it "have the number_of_stars preference" do

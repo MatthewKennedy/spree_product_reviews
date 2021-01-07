@@ -86,19 +86,6 @@ feature "Reviews", :js do
     end
   end
 
-  context "visits product with review where show_identifier is false" do
-    let!(:review) { create(:review, :approved, :hide_identifier, review: "review text", user: someone) }
-
-    before do
-      visit spree.product_path(review.product)
-    end
-
-    it "show anonymous review" do
-      expect(page).to have_text Spree.t(:anonymous)
-      expect(page).to have_text "review text"
-    end
-  end
-
   private
 
   def click_star(num)
