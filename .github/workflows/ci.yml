@@ -16,7 +16,7 @@ jobs:
         ruby: ['2.6', '2.7']
         gemfile:
           - spree_4_2
-          - spree_master
+          #- spree_master
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
       BUNDLE_PATH_RELATIVE_TO_CWD: true
@@ -53,7 +53,7 @@ jobs:
         ruby: ['2.6', '2.7']
         gemfile:
           - spree_4_2
-          - spree_master
+          #- spree_master
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
       BUNDLE_PATH_RELATIVE_TO_CWD: true
