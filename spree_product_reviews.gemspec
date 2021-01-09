@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.author = ["Matthew Kennedy"]
   s.email = "m.kennedy@me.com"
-  s.homepage = "https://github.com/matthewkennedy/spree-reviews/"
+  s.homepage = "https://github.com/matthewkennedy/spree_product_reviews/"
   s.license = "BSD-3-Clause"
 
   s.files = `git ls-files`.split("\n").reject { |f| f.match(/^spec/) && !f.match(/^spec\/fixtures/) }
