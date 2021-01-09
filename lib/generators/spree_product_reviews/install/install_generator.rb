@@ -9,7 +9,7 @@ module SpreeProductReviews
       end
 
       def add_migrations
-        run "bundle exec rake railties:install:migrations FROM=spree_reviews"
+        run "bundle exec rake railties:install:migrations FROM=spree_product_reviews"
       end
 
       def run_migrations
