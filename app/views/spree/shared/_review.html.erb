@@ -1,9 +1,9 @@
 <div class="card my-5 review">
-  <div class="card-body">
+  <div class="card-body pb-0">
     <h4 class="card-title"><%= review.title %></h4>
     <p class="card-text"><%= simple_format(review.review) %></p>
   </div>
-  <div class="card-body">
+  <div class="card-body pt-0">
     <span class="reviews-rating d-inline-block">
       <%= render 'spree/reviews/stars', stars: review.rating %>
     </span>
