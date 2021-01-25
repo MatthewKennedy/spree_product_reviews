@@ -14,23 +14,13 @@
   height: var(--star-box-size);
   display: flex;
 }
-
-body#product-details {
-  .center-ratings {
-    margin: 0;
-    width: fit-content;
-    height: var(--star-box-size);
-    display: flex;
-  }
-}
-
 .rate-area {
   float: left;
   border-style: none;
 
   &:not(:checked) > input {
     position: absolute;
-    top: -9999px;
+    left: -9999px;
     clip: rect(0, 0, 0, 0);
   }
 
