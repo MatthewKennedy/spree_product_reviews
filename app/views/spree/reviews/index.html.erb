@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row my-5 text-center">
-    <div class="col">
+    <div class="col-12">
       <h1 class="mt-0"><%= @product.name + " " + Spree.t(:reviews) %> </h1>
       <%= render 'spree/shared/rating', product: @product, review: 0 %>
       <%= link_to Spree.t(:back_to) + " " +@product.name, product_path(@product), class: 'btn btn-outline-primary text-uppercase', rel: 'nofollow' %>
@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-12">
       <% if SpreeProductReviews::Config[:track_locale] %>
         <% @approved_reviews.localized(I18n.locale).each do |review| %>
           <%= render 'spree/shared/review', review: review %>
