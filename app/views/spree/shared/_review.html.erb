@@ -14,5 +14,11 @@
       -
       <%= localize review.created_at.to_date %>
     </p>
+    <% if review.reply.present? %>
+    <hr>
+      <blockquote>
+        <%= simple_format(review.reply) %>
+      </blockquote>
+    <% end %>
   </div>
 </div>

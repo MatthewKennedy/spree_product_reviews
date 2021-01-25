@@ -15,6 +15,11 @@
   <%= f.text_area :review, wrap: 'virtual', rows: 10, cols: 60, class: 'form-control' %>
 </div>
 
+<div class="form-group">
+  <%= f.label :reply %>
+  <%= f.text_area :reply, wrap: 'virtual', rows: 10, cols: 60, class: 'form-control' %>
+</div>
+
 <% if SpreeProductReviews::Config[:track_locale] %>
   <div class="form-group">
     <%= f.label :locale %>
