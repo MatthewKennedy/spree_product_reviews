@@ -27,7 +27,7 @@ module Spree
     scope :most_recent_first, -> { order("spree_reviews.created_at DESC") }
     scope :oldest_first, -> { reorder("spree_reviews.created_at ASC") }
 
-    scope :preview, -> { limit(SpreeProductReviews::Config[:preview_size]).oldest_first }
+    scope :preview, -> { limit(SpreeProductReviews::Config[:preview_size]) }
     scope :latest, -> { limit(1).most_recent_first }
     scope :approved, -> { where(approved: true) }
     scope :not_approved, -> { where(approved: false) }

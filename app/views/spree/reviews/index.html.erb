@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row my-5 text-center">
     <div class="col">
-      <h1><%= @product.name + " " + Spree.t(:reviews) %> </h1>
+      <h1 class="mt-0"><%= @product.name + " " + Spree.t(:reviews) %> </h1>
       <%= render 'spree/shared/rating', product: @product, review: 0 %>
       <%= link_to Spree.t(:back_to) + " " +@product.name, product_path(@product), class: 'btn btn-outline-primary text-uppercase', rel: 'nofollow' %>
+      <%= Spree.t(:or) %>
       <%= link_to Spree.t(:write_your_own_review), new_product_review_path(@product), class: 'btn btn-primary text-uppercase', rel: 'nofollow' %>
     </div>
   </div>
@@ -19,15 +20,23 @@
         <% end %>
       <% end %>
 
-      <% if @approved_reviews.respond_to?(:total_pages) %>
-        <div class="plp-pagination d-none d-lg-flex">
-          <%= paginate @approved_reviews, window: 2, theme: 'twitter-bootstrap-4' %>
-        </div>
+        <% if Spree.version.to_f < 4.0 %>
+          <% if @approved_reviews.respond_to?(:total_pages) %>
+            <div class="mt-4">
+            <%= paginate @approved_reviews, theme: 'twitter-bootstrap-3' %>
+            </div>
+          <% end %>
+        <% else %>
+          <% if @approved_reviews.respond_to?(:total_pages) %>
+            <div class="plp-pagination d-none d-lg-flex">
+              <%= paginate @approved_reviews, window: 2, theme: 'twitter-bootstrap-4' %>
+            </div>
 
-        <div class="plp-pagination d-lg-none">
-          <%= paginate @approved_reviews, window: 1, theme: 'twitter-bootstrap-4' %>
-        </div>
-      <% end %>
+            <div class="plp-pagination d-lg-none">
+              <%= paginate @approved_reviews, window: 1, theme: 'twitter-bootstrap-4' %>
+            </div>
+          <% end %>
+        <% end %>
     </div>
   </div>
 </div>

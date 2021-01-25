@@ -2,6 +2,7 @@ module Spree
   class ReviewsController < Spree::StoreController
     helper Spree::BaseHelper
     before_action :load_product, only: [:index, :new, :create]
+    before_action :init_pagination, only: [:index]
 
     def index
       @approved_reviews = Spree::Review.default_approval_filter.where(product: @product).page(@pagination_page).per(@pagination_per_page)

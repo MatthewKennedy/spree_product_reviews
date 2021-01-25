@@ -34,9 +34,11 @@ en:
     for: for
     from: from
     info_approve_review: Review approved
-    leave_us_a_review_for: "Please leave us a review and a rating for our '%{name}'"
+    leave_us_a_review_for: "Please leave a review for: %{name}"
     no_reviews_available: "No reviews have been written for this product."
+    or: "- or -"
     out_of_5: "out of 5"
+    product_review_average_from: "%{average} average (%{count} reviews)"
     rating: rating
     reviews: Reviews
     read_reviews: Read reviews
