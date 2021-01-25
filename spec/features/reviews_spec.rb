@@ -37,9 +37,9 @@ feature "Reviews", :js do
         expect(page).to have_text review.title
       end
 
-      it "can see a prompt to review" do
-        expect(page).to have_text Spree.t(:read_reviews)
-      end
+      # it "can see a prompt to review" do
+      #   expect(page).to have_text Spree.t(:read_reviews)
+      # end
     end
   end
 
@@ -53,9 +53,9 @@ feature "Reviews", :js do
         expect(page).to have_text review.title
       end
 
-      it "can see create new review button" do
-        expect(page).to have_text Spree.t(:read_reviews)
-      end
+      # it "can see create new review button" do
+      #   expect(page).to have_text Spree.t(:read_reviews)
+      # end
 
       it "can create new review" do
         user = create(:user, email: "admin4546@person.com", password: "password", password_confirmation: "password")

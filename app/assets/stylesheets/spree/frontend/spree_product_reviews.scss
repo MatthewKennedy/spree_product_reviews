@@ -78,6 +78,10 @@ body#product-details {
   pointer-events: none !important;
 }
 
+.linked-stars {
+  display: inline-block;
+}
+
 div#final-rating input[type="radio"]:checked + label {
   background: linear-gradient(90deg, var(--star-active-bg-color) var(--rating), var(--star-active-bg-color) var(--rating), var(--star-default-bg-color) var(--rating));
 }
