@@ -74,9 +74,9 @@ RSpec.describe Spree::Review, type: :model do
         expect(described_class.oldest_first.to_a).to eq([review_1, review_3, review_2, review_4])
       end
 
-      it "uses oldest_first for preview" do
+      it "uses newest_first for preview" do
         reset_spree_preferences
-        expect(described_class.preview.to_a).to eq([review_1, review_3, review_2])
+        expect(described_class.preview.to_a).to eq([review_2, review_3, review_1])
       end
     end
 
