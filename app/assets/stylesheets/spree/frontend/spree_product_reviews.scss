@@ -6,6 +6,17 @@
   border: 1px solid var(--star-default-color);
   display: inline-block;
   text-align: center !important;
+  position: relative;
+
+  svg.star {
+    width: 80%;
+    height: 80%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .center-ratings {
@@ -14,6 +25,7 @@
   height: var(--star-box-size);
   display: flex;
 }
+
 .rate-area {
   float: left;
   border-style: none;
@@ -34,10 +46,6 @@
     line-height: var(--star-line-height);
     margin: 0 2px;
     transition: all var(--fade-speed) ease;
-  }
-
-  &:not(:checked) > label::before {
-    content: '\2605';
   }
 
   > input:checked ~ label {

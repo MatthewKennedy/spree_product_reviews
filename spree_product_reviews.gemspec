@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency "spree_auth_devise"
   s.add_dependency "deface", "~> 1.0"
   s.add_dependency "spree_extension"
+  s.add_dependency "inline_svg"
 
   s.add_development_dependency "standard"
   s.add_development_dependency "spree_dev_tools"

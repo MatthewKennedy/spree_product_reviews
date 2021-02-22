@@ -13,6 +13,9 @@
            id="<%= i %>-star"
            value="<%= pluralize(i, 'stars') %>" <%= state %>
            <%= 'checked' if i == stars %>>
-    <label class="star-box" for="<%= i %>-star"></label>
+    <label class="star-box" for="<%= i %>-star">
+      <%= inline_svg_tag "spree-product-review-star.svg", class: 'star' %>
+    </label>
   <% end %>
 </div>
+
