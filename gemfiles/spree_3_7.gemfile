@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "spree", branch: "3-7-stable", git: "https://github.com/spree/spree.git"
+gem "spree", "~> 3.7.0"
 gem "rails-controller-testing"
 gem "spree_auth_devise", "~> 3.4.0"
 
