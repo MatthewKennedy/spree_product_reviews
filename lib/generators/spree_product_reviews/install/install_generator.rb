@@ -3,6 +3,19 @@ module SpreeProductReviews
     class InstallGenerator < Rails::Generators::Base
       class_option :auto_run_migrations, type: :boolean, default: false
 
+      def self.source_paths
+        paths = superclass.source_paths
+
+        paths << File.expand_path("../templates", __FILE__)
+        paths.flatten
+      end
+
+      def add_files
+        if Spree::Core::Engine.backend_available? || Rails.env.test?
+          template "assets/images/spree-product-review-star.svg", "app/assets/images/spree-product-review-star.svg"
+        end
+      end
+
       def add_stylesheets
         inject_into_file "vendor/assets/stylesheets/spree/frontend/all.css", " *= require spree/frontend/spree_product_reviews_vars\n", before: %r{\*/}, verbose: true
         inject_into_file "vendor/assets/stylesheets/spree/frontend/all.css", " *= require spree/frontend/spree_product_reviews\n", before: %r{\*/}, verbose: true
