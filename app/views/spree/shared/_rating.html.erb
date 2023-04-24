@@ -1,5 +1,5 @@
 <div class="ratings">
-   <div id="final-rating" style="--rating:<%= last_star_percentage(product) %>%" class="center-ratings">
+   <div style="--rating:<%= last_star_percentage(product) %>%" class="center-ratings final-rating">
      <%= render 'spree/reviews/stars', stars: product.stars %>
    </div>
 

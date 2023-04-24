@@ -10,12 +10,11 @@
   <% for i in (1..SpreeProductReviews::Config.number_of_stars).reverse_each %>
     <input name="<%= name %>"
            type="radio"
-           id="<%= i %>-star"
+           id="<%= i %>-star-<%= name %>"
            value="<%= pluralize(i, 'stars') %>" <%= state %>
            <%= 'checked' if i == stars %>>
-    <label class="star-box" for="<%= i %>-star">
+    <label class="star-box" for="<%= i %>-star-<%= name %>">
       <%= inline_svg_tag "spree-product-review-star.svg", class: 'star' %>
     </label>
   <% end %>
 </div>
-

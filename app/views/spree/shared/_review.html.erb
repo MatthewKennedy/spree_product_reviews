@@ -4,12 +4,12 @@
     <p class="card-text"><%= simple_format(review.review) %></p>
   </div>
   <div class="card-body pt-0">
-    <span class="reviews-rating d-inline-block">
+    <div class="reviews-rating d-inline-block">
       <%= render 'spree/reviews/stars', stars: review.rating %>
-    </span>
+    </div>
     <p class="card-text">
       <strong>
-        <span itemprop="author"><%= review.name %></span>
+        <span><%= review.name %></span>
       </strong>
       -
       <%= localize review.created_at.to_date %>
